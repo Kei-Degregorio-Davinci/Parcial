@@ -1,12 +1,12 @@
 public abstract class Shape {
-    private String color;
+    private String color = "red";
     private boolean filled;
 
     public Shape() {
     }
 
     public Shape(String color, boolean filled) {
-        this.color = color;
+        this.color = "color";
         this.filled = filled;
     }
 
@@ -30,7 +30,7 @@ public abstract class Shape {
 
     public abstract double getPerimeter();
 
-    @Override
+
     public String toString() {
         return "Shape{" +
                 "color='" + color + '\'' +
