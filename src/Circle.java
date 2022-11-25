@@ -3,7 +3,7 @@ public class Circle extends Shape{
 
     public Circle() {
         super();
-        radious = 1.0;
+        this.setRadious(1.0);
     }
 
     public Circle(double radious){
@@ -26,12 +26,20 @@ public class Circle extends Shape{
 
     @Override
     public double getArea() {
-        return radious*radious*Math.PI;
+        double area = radious*radious*Math.PI;
+        System.out.println("El área del circulo es de: " + area);
+        return area;
     }
 
     @Override
     public double getPerimeter() {
-        return 2*radious*Math.PI;
+        double perimeter = 2*radious*Math.PI;
+        System.out.println("El perímetro del círculo es de: "+ perimeter);
+        return perimeter;
+    }
+
+    public String toString() {
+        return "Circle [radius=" + this.radious + " " + super.toString() + "]";
     }
 
 

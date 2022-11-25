@@ -1,12 +1,15 @@
 public abstract class Shape {
-    private String color = "red";
+    private String color;
     private boolean filled;
 
     public Shape() {
+        this.setColor("red");
+        this.setFilled(true);
     }
 
     public Shape(String color, boolean filled) {
-        this.color = "color";
+        super();
+        this.color = color;
         this.filled = filled;
     }
 
@@ -30,11 +33,9 @@ public abstract class Shape {
 
     public abstract double getPerimeter();
 
-
     public String toString() {
-        return "Shape{" +
-                "color='" + color + '\'' +
-                ", filled=" + filled +
-                '}';
+        return "Shape [color=" + this.color + ", filled=" + this.filled + "]";
     }
+
 }
+
